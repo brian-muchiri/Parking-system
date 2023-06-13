@@ -1,0 +1,259 @@
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+body {
+	font-family: sans-serif;
+	background: #f6f9fa;
+}
+
+h1 {
+	color: #ccc;
+	text-align: center;
+}
+h4.payment-title {
+    text-align: left;
+    padding: 10px 0px 30px 30px;
+    font-weight: 500;
+    color: #5e6977;
+}
+a {
+  color: #ccc;
+  text-decoration: none;
+  outline: none;
+}
+
+.tab_container {
+    width: 550px;
+    margin: 50px auto;
+    position: relative;
+    border: 1px solid #eee;
+    border-radius: 7px;
+  background:#fff;
+}
+
+input, section {
+  clear: both;
+  padding-top: 10px;
+  display: none;
+}
+
+
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+  padding: 20px 0 0 0;
+  color: #999;
+}
+
+
+
+
+
+
+
+
+.payment-row {
+  background-color: #f5f6fa;
+  padding-left: 30px;
+  padding-right: 30px;
+      width: 100%;
+}
+.payment-row-last {
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 100%;
+}
+
+.payment-padding-right {
+
+}
+.select-icon {
+  display: table-cell;
+  vertical-align: top;
+  text-align: left;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  width: 24px;
+  height: 24px;
+}
+
+.select-txt {
+  display: table-cell;
+  vertical-align: middle;
+  word-wrap: break-word;
+  height: 60px;
+  text-align: left;
+  padding-left: 15px;
+  font-size: 12pt;
+}
+.select-logo {
+  padding-right: 0px;
+  vertical-align: top;
+      right: 35px;
+    position: absolute;
+}
+.select-logo-sub {
+  display: table-cell;
+  vertical-align: middle;
+}
+.logo-spacer {
+  padding-right: 13px;
+}
+.pymt-type-name {
+  font-weight: 500;
+  font-size: 12pt;
+  padding-bottom: 8px;
+  color: #5a6977;
+}
+.pymt-type-desc {
+  padding-bottom: 22px;
+  width:70%;
+    font-size:14px;
+}
+.hr {
+  border-bottom: 1px solid #ebf0f5;
+  padding-bottom: 5px;
+}
+.form-cc {
+  display: table;
+  width: 100%;
+  text-align: left;
+  padding: 0px 0px 30px 30px;
+}
+.row-cc {
+  display: table;
+  width: 100%;
+  padding-bottom: 7px;
+}
+.cc-txt {
+  border-color: #e1e8ee;
+  width: 100%;
+}
+.input {
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  height: 38px;
+  padding-left: 15px;
+  font-weight: 600;
+  font-size: 11pt;
+  color: #5e6977;
+
+}
+input[type="text"] {
+   display: initial;
+  padding:15px
+}
+.text-validated {
+  border-color: #7DC855;
+  background-image: url("https://www.dropbox.com/s/1mve74fafiwsae1/icon-tick.png?raw=1");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+}
+.cc-ddl {
+  border-color: #f0f4f7;
+  background-color: #f0f4f7;
+      width: 100px;
+    margin-right: 10px;
+
+
+}
+.cc-title {
+  font-size: 10.5pt;
+  padding-bottom: 8px;
+}
+.cc-field {
+  padding-top: 15px;
+  padding-right: 30px;
+  display: table-cell;
+}
+.button-master-container, .button-master-container:hover {
+  display: table;
+  width: 100%;
+  border-top: 1px solid #e1e8ee;
+  height: 60px;
+  vertical-align: bottom;
+}
+.button-container {
+  width: 50%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+a, a:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+.button-container:hover {
+background-color:#eee;
+  cursor:pointer;
+}
+.button-finish {
+  border-left: 1px solid #e1e8ee;
+  color: #7DC855;
+  font-weight: 500;
+  font-size: 12pt;
+  background-image: url("https://www.dropbox.com/s/10d95otbo48r0hh/icon-next.png?raw=1");
+  background-repeat: no-repeat;
+  background-position: right 50px center;
+}
+.cvv-tooltip-img {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 17px;
+}
+input[id^="radio"]{
+   display:none;
+}
+
+input[id^="radio"] + label
+{
+    background-image:url("https://www.dropbox.com/s/mnwbybfl4pnzoi4/radio-inactive.png?raw=1");
+    height: 26px;
+    width: 24px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    cursor:pointer;
+    border-radius: 50%;
+}
+
+input[id^="radio"]:checked + label
+{
+    background-image:url("https://www.dropbox.com/s/8634yi8i1s7fx7w/radio-active.png?raw=1");
+  height: 26px;
+    width: 24px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    cursor:pointer;
+}
+p.credit {
+  text-align:center;
+  color: #ccc;
+}
+
+	<dependency>
+			<groupId>com.bytes-pot</groupId>
+			<artifactId>daraja-api</artifactId>
+			<version>1.6-b</version>
+		</dependency>

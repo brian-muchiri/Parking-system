@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html xmlns:th="http://www.thymeleaf.org">
+
+        <head>
+        <meta charset="utf-8">
+        <title>Reservation Form</title>
+    <link rel="stylesheet" href="reserve.css">
+    <link rel="stylesheet" href="../static/reserve.css">
+</head>
+<body id="body">
+
+<style>
+    .bigdiv{
+
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(231, 224, 224, 0.902);
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .smalldiv{
+            height: 20vh;
+            width: 20vw;
+            outline:1px solid #2d2d2d2d ;
+            border-radius: 3vh;
+            background-color: rgba(231, 224, 224, 1);
+            display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 3vh;
+        flex-direction: column;
+    }
+    .smalldiv button{
+        height: 4vh;
+        width: 10vw;
+        border: none;
+        background-color: #dc143c;
+        border-radius: 2vh;
+        margin-top: 3vh;
+        color: #fff;
+    }
+</style>
+
+
+<div class='bigdiv'>
+    <div class='smalldiv'>
+        <p id="message">
+            Dear client, please pay your parking reservation fee to Till Number: 959595 <br>Thank you for choosing our parking lot
+        </p>
+        <!-- <a href="/"><button>Back</button></a> -->
+        <a href="/"><button>Back</button></a>
+
+    </div>
+</div>
+
+
+<form th:action="${url}" method="get" >
+
+
+    <input type="text" id="id" name="id" required hidden="hidden" th:value="${id}">
+    <h1>Reservation Form</h1>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required value="+254">
+    </div>
+    <div class="form-group">
+        <label for="license-plate">License Plate:</label>
+        <input type="text" id="license-plate" name="license_plate" required>
+    </div>
+    <div class="form-group">
+        <label for="vehicle-type">Vehicle Type:</label>
+        <select id="vehicle-type" name="vehicle_type" required>
+            <option value="">-- Select vehicle type --</option>
+            <option value="car">Car</option>
+            <option value="truck">Truck</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="parking-duration">Parking Duration:</label>
+        <input type="number" name="parking_duration" id="parking-duration" required placeholder="hours">
+    </div>
+    <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+    </div>
+    <div class="form-group">
+        <label for="time">Time:</label>
+
+        <input type="time" id="time" name="time" min="00:00" max="23:59" step="3600" required>
+    </div>
+    <div class="form-group">
+        <input type="checkbox" id="terms-and-conditions" name="terms_and_conditions" required>
+        <label for="terms-and-conditions">I agree to the Terms and Conditions.</label>
+    </div>
+    <button id="formsubmit" type="submit">Submit</button>
+    <!-- <script src="index.js"></script> -->
+    <script src="../static/index.js"></script>
+</form>
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>

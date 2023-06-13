@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Parking Slot Identification System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div>
+        <h1>Smatr Parking System</h1>
+    </div>
+    <div class="links">
+
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+
+    </div>
+
+</nav>
+<main>
+    <section>
+        <h2>Find Parking Slot</h2>
+        <form action="search" method="post">
+            <input type="text" id="street" name="street" placeholder="Street">
+            <button type="submit" id="search_btn">Search</button>
+        </form>
+    </section>
+    <section>
+        <div style="height:5vh;width:1vh"></div>
+        <h2>Parking Slot Results</h2>
+<!--        <div class="maps">-->
+<!--            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.756106319232!2d37.65430965060593!3d-0.3199674354251008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1827b9cbd73ed95f%3A0xefb4ff5ee3ca6fd4!2sChuka%20University%20Gate%20F!5e0!3m2!1sen!2ske!4v1679406803514!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+<!--        </div>-->
+
+        <div th:each="slot : ${slots}" class="slot-card">
+            <div>
+                <h3 th:text="${slot.streetName}">Street Name</h3>
+                <p th:text="${slot.city}+ ','">
+                    <span th:class="${slot.city}" th:text="${slot.city} ? 'Available' : 'Unavailable'">Unavailable</span>
+                </p>
+                <p th:text="${slot.available}">View details</p>
+                <a th:href="${slot.url}">View details</a>
+
+                    <button class="reserve_btn">RESERVE</button>
+            </div>
+            <div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2023 Smatr Parking System</p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script src="index.js"></script>
+
+</body>
+</html>
